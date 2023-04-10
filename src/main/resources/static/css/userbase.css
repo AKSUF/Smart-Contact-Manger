@@ -1,0 +1,59 @@
+/* siderbar */
+.sidebar{
+	width:20%;
+	background:white;
+	height;100px;
+	position: fixed;
+	padding-top: 45px;
+	
+}
+.sidebar a{
+	
+	display: block;
+	width:100px;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+	
+	
+}
+@media only screen and (max-width:600px){
+	
+}
+.sidebar a:hover{
+	background:rgb(191, 255, 0);
+}
+
+.content{
+	margin-left:20%;
+	width:80%;
+	height:100%;
+background-color:#e6eeff;
+	
+	
+	
+	position: fixed;
+	padding-top:0px;
+}
+.sidebar .crossBtn{
+	position:absolute;
+	top:0;
+	right:35px;
+	font-size:36px;
+	cursor:pointer;
+		
+}
+.content .bar{
+	font-size:36px;
+	
+}
+
+
+.my_profile_picture{
+	width: 30px;
+	height: 35px;
+	object-fit:cover;
+	border-radius: 50%;
+	
+	
+}

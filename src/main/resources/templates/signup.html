@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title th:text="${title}">Insert title here</title>
+</head>
+
+<body>
+    <h1>This is about page</h1>
+    <section>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+
+                    <div class="my-card">
+                        <!-- modal -->
+
+                        <div th:if="${session.message}" th:classappend="${session.message.type}" role="alert">
+                            <p th:text="${session.message.content}"></p>
+                            <th:block th:text="${#session.removeAttribute('message')}" />
+                        </div>
+
+
+
+
+                        <!-- modal -->
+
+
+
+
+
+                        <div class="text-center">
+                            <img class="" style="width:80px;" src="" th:src="@{../img/membership.png}" alt="" />
+                        </div>
+                        <form class="form-signin" method="post" th:object="${user}" th:action="@{/do_register}">
+                            <h2 class="form-signin-heading text-center">Please sign in</h2>
+                            <p>
+                                <label for="username" class="sr-only">Username</label>
+                                <input type="text" id="username" name="name" class="form-control" th:value="${user.name}" placeholder="Username" required autofocus>
+                            </p>
+
+                            <p>
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" th:value="${user.email}" placeholder="Email" required autofocus>
+                            </p>
+
+
+
+                            <p>
+                                <label for="password" class="sr-only">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                            </p>
+
+
+                            <div class="form-group">
+
+                                <textarea placeholder="Enter about yourself " th:value="${user.about}" name="" id="" rows="7" class="form-control"></textarea>
+
+                            </div>
+
+
+
+
+                            <!--     terms and condition -->
+
+                            <div class="form-group form-check">
+
+                                <input type="checkbox" name="agreement" class="form-check-input" id="agreement" />
+                                <lavel for="agreement">Accept terms and condition</lavel>
+                            </div>
+
+
+                            <input name="_csrf" type="hidden" value="21fef567-6d32-46d5-8cf5-1ebac8d00d3f" />
+                            <div class="container">
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+                                <button class="btn btn-lg btn-warning btn-block" type="reset">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+</body>
+
+</html>

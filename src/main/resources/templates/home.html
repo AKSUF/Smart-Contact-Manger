@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>This is home page</h1>
+<section class="banner d-flex justify-content-center align-items-center">
+
+<div class="text-center">
+<h1>Smart Contact manager</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod reiciendis error sit nesciunt modi perspiciatis.</p>
+<button class="btn btn-primary btn-large"><a class="nav-link disabled" th:href="@{/user/user_dashboard}">Get Started</a></button>
+</div>
+
+</section>
+</body>
+</html>
